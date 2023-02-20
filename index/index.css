@@ -1,0 +1,121 @@
+html{
+    background-image: url("images/background.jpg");
+    background-size: 100% 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#body{
+
+}
+/*顶部区域*/
+#top{
+    width: 100%;
+    height: 8vh;
+    opacity: 0.45;
+    background-color: #505BC5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#top div{
+    width: 8vh;
+    height: auto;
+}
+#time{
+
+
+}
+#head{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#steam-404Say{
+    width: 50vh;
+    display: inline-block;
+}
+#label{
+    display: inline-block;
+    width: 40vh;
+}
+#label img{
+    width: 5vh;
+    height: 5vh;
+}
+#looklook{
+    display: inline-block;
+}
+#software{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#software div{
+    text-align: center;
+}
+#software img{
+    width: 5vh;
+    height: 5vh;
+}
+#software .dividingLine{
+    align-items: center;
+}
+#software a{
+    color: #560bad;
+}
+#content{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    height: auto;
+    width: 100%;
+    text-align: center;
+
+}
+#qqGroup{
+    text-align: center;
+    margin: 10vh;
+}
+#content div p{
+    font-size: 3vh;
+    text-align: center;
+}
+#content > div{
+    border-radius: 1vh;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+#content > div > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+#content div div div{
+    width: 20vh;
+    height: 20vh;
+}
+#content div div div p{
+    font-size: 2vh;
+}
+#content > div > div > div > a >img{
+    width: 10vh;
+    height: 10vh;
+}
+#end{
+
+}
+#endSvg{
+
+}
+#copyright{
+    float: end;
+    text-align: center;
+}
