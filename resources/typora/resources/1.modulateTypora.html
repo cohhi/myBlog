@@ -1,0 +1,50 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../prism/production/prism.css">
+    <script src="../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#turnOffUpdate">旧版强制更新</a>
+    <a href="#fixUpRegedit">修改注册表</a>
+    <a href="#DisableTyporaPermission">去除typora权限</a>
+</div>
+<div id="content">
+    <div id="turnOffUpdate">
+        <p>强制更新</p>
+        <a href="https://typora.io">官网: typora.io</a>
+        <a href="https://typoraio.cn/">官方中文站: (typoraio.cn)</a>
+        <h3>新版typora为收费版本(￥89)</h3>
+    </div>
+    <div id="fixUpRegedit">
+        <p>修改注册表</p>
+        <h3>打开cmd,输入regedit打开注册表</h3>
+        <pre>
+            <code class="language-cmd">
+                <script type="text/plain" class="language-markup">
+Microsoft Windows [版本 10.0.22621.1265]
+(c) Microsoft Corporation。保留所有权利。
+
+C:\Users\steam-404> regedit
+                </script>
+            </code>
+        </pre>
+        <h3>找到路径:计算机\HKEY_CURRENT_USER\SOFTWARE\Typora</h3>
+        <h3>修改IDate,将日期往后调</h3>
+    </div>
+    <div id="DisableTyporaPermission">
+        <p>去除typora权限</p>
+        <h3>右击左侧typora文件夹-选择属性-Administrators-完全控制和读取-勾选拒绝</h3>
+        <h3>此时打开typora就能正常使用</h3>
+        <h3>调教完成</h3>
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>

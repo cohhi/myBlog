@@ -182,7 +182,7 @@
                     </a>
                 </div>
                 <div id="vue2AndVue3">
-                    <p>vue2+3+Vite</p>
+                    <p>vue2+3</p>
                     <a href="">
                         <img src="index/images/vue.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
@@ -191,6 +191,12 @@
                     <p>Vite</p>
                     <a href="">
                         <img src="index/images/vitejs.svg" v-bind:alt="ImageRenderingFailure">
+                    </a>
+                </div>
+                <div id="typora">
+                    <p>typora</p>
+                    <a href="resources/typora/index.html">
+                        <img src="index/images/typora.png" alt="">
                     </a>
                 </div>
             </div>
@@ -263,6 +269,13 @@
         })
         const vite = new Vue({
             el: '#vite',
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const typora = new Vue({
+            el: '#typora',
             data: {
                 name: 'steam-404',
                 ImageRenderingFailure: "图片正在加载",
