@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="prism/production/prism.css">
     <script src="prism/production/prism.js"></script>
     <link rel="stylesheet" href="index/index.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>-->
+    <!--    <script src="vue/vue2/production.js"></script>-->
+    <script src="vue/vue2/development.js"></script>
 </head>
 <body>
 <div id="body">
@@ -134,59 +136,146 @@
                 <div id="IOSLearning">
                     <p>IOS应用开发</p>
                     <a href="resources/IOS/index.html">
-                        <img src="index/images/macos.svg" alt="">
+                        <img src="index/images/macos.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
                 <div id="AlgorithmsLearning">
                     <p>数据结构与算法</p>
                     <a href="resources/algorithm/index.html">
-                        <img src="index/images/algorithm.jpeg" alt="">
+                        <img src="index/images/algorithm.jpeg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
                 <div id="LinuxLearning">
                     <p>Linux</p>
                     <a href="resources/linux/index.html">
-                        <img src="index/images/linux.svg" alt="">
+                        <img src="index/images/linux.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
                 <div id="WEB">
                     <p>WEB</p>
                     <a href="resources/web/index.html">
-                        <img src="index/images/web.svg" alt="">
+                        <img src="index/images/web.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
                 <div id="markdown">
                     <p>Markdown手册</p>
                     <a href="resources/markdown/index.html">
-                        <img src="index/images/markdown.svg" alt="">
+                        <img src="index/images/markdown.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
                 <div id="github">
                     <p>github小技巧</p>
                     <a href="resources/github/index.html">
-                        <img src="index/images/github.svg" alt="">
+                        <img src="index/images/github.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
                 <div id="applicationTest">
                     <p>软件测试</p>
                     <a href="">
-                        <img src="index/images/bug.svg" alt="">
+                        <img src="index/images/bug.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
                 <div id="nodejs">
                     <p>node.js</p>
                     <a href="">
-                        <img src="index/images/nodejs.svg" alt="">
+                        <img src="index/images/nodejs.svg" v-bind:alt="ImageRenderingFailure">
+                    </a>
+                </div>
+                <div id="vue2AndVue3">
+                    <p>vue2+3+Vite</p>
+                    <a href="">
+                        <img src="index/images/vue.svg" v-bind:alt="ImageRenderingFailure">
+                    </a>
+                </div>
+                <div id="vite">
+                    <p>Vite</p>
+                    <a href="">
+                        <img src="index/images/vitejs.svg" v-bind:alt="ImageRenderingFailure">
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        Vue.config.productionTip = "false";
+        const IOSLearning = new Vue({
+            el: '#IOSLearning',
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            },
+        })
+        const AlgorithmsLearning = new Vue({
+            el: '#AlgorithmsLearning',
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const LinuxLearning = new Vue({
+            el: '#LinuxLearning',
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const WEB = new Vue({
+            el: "#WEB",
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const markdown = new Vue({
+            el: "#markdown",
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const github = new Vue({
+            el: "#github",
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const applicationTest = new Vue({
+            el: "#applicationTest",
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const nodejs = new Vue({
+            el: '#nodejs',
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const vue2AndVue3 = new Vue({
+            el: '#vue2AndVue3',
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+        const vite = new Vue({
+            el: '#vite',
+            data: {
+                name: 'steam-404',
+                ImageRenderingFailure: "图片正在加载",
+            }
+        })
+    </script>
     <div id="qqGroup">
         <p>点击加入用户群</p>
         <a href="https://qm.qq.com/cgi-bin/qm/qr?k=AAGP8sx57ECSVid14GMuaSLhbkmRJpfK&jump_from=webapi&authKey=DEosHFlA+BFKf0qVeh+wvbSE4ATo6RND1r+hfz+P+8/OvNAyfROvhqpzK+mYbe6J">
-            <svg x="1676711985570" class="icon" viewBox="0 0 1024 1024"  xmlns="http://www.w3.org/2000/svg"  width="128" height="128">
-                <path d="M512.268258 64.433103c-247.183323 0-447.569968 200.380501-447.569968 447.563825 0 247.189467 200.385621 447.570992 447.569968 447.570992s447.569968-200.380501 447.569968-447.569968c0-247.184347-200.386645-447.564849-447.569968-447.564849z m252.85872 584.692787c-18.997168 16.287968-43.668709-53.628042-47.2134-42.875198-8.642616 26.161294-12.695154 43.646184-38.148944 72.127602-1.35972 1.521494 29.43056 12.647032 38.148944 36.396051 8.346713 22.756875 24.596797 58.811973-81.725503 70.125906-62.389428 6.635801-107.471099-33.244533-111.964932-32.85648-8.325212 0.734126-4.618747 0-13.568528 0-7.321804 0-7.807126 0.534468-14.69685 0-1.899307-0.140272-22.632985 32.85648-115.364231 32.85648-71.878798 0-90.48177-45.243445-76.032701-70.125906 14.464428-24.877342 38.579999-32.122354 35.176604-36.06636-16.73643-19.39546-28.287904-40.1404-35.176604-58.882621-1.705793-4.666869-3.135137-9.209848-4.262434-13.574672-2.611931-10.008479-22.627866 58.76385-44.111028 42.875198-21.483162-15.883533-19.567472-56.309597-5.659014-95.003248 14.033372-39.006959 49.37687-76.562049 49.771065-84.854496 1.412962-30.849665-3.044011-35.975235 0-44.078263 6.780169-18.149391 15.034732-11.190043 15.034733-20.609788 0-118.64476 88.172909-214.829571 196.933079-214.829571 108.755051 0 196.928984 96.184811 196.928984 214.829571 0 4.554242 11.815637 0 17.474651 20.609788 1.165181 4.256291 1.968931 20.684531 0.58771 44.078263-0.658358 11.238165 29.954789 24.914202 45.777913 84.854496 15.845649 59.945414 0 88.215912-7.909514 95.003248z" fill="#68A5E1" >
+            <svg x="1676711985570" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="128"
+                 height="128">
+                <path d="M512.268258 64.433103c-247.183323 0-447.569968 200.380501-447.569968 447.563825 0 247.189467 200.385621 447.570992 447.569968 447.570992s447.569968-200.380501 447.569968-447.569968c0-247.184347-200.386645-447.564849-447.569968-447.564849z m252.85872 584.692787c-18.997168 16.287968-43.668709-53.628042-47.2134-42.875198-8.642616 26.161294-12.695154 43.646184-38.148944 72.127602-1.35972 1.521494 29.43056 12.647032 38.148944 36.396051 8.346713 22.756875 24.596797 58.811973-81.725503 70.125906-62.389428 6.635801-107.471099-33.244533-111.964932-32.85648-8.325212 0.734126-4.618747 0-13.568528 0-7.321804 0-7.807126 0.534468-14.69685 0-1.899307-0.140272-22.632985 32.85648-115.364231 32.85648-71.878798 0-90.48177-45.243445-76.032701-70.125906 14.464428-24.877342 38.579999-32.122354 35.176604-36.06636-16.73643-19.39546-28.287904-40.1404-35.176604-58.882621-1.705793-4.666869-3.135137-9.209848-4.262434-13.574672-2.611931-10.008479-22.627866 58.76385-44.111028 42.875198-21.483162-15.883533-19.567472-56.309597-5.659014-95.003248 14.033372-39.006959 49.37687-76.562049 49.771065-84.854496 1.412962-30.849665-3.044011-35.975235 0-44.078263 6.780169-18.149391 15.034732-11.190043 15.034733-20.609788 0-118.64476 88.172909-214.829571 196.933079-214.829571 108.755051 0 196.928984 96.184811 196.928984 214.829571 0 4.554242 11.815637 0 17.474651 20.609788 1.165181 4.256291 1.968931 20.684531 0.58771 44.078263-0.658358 11.238165 29.954789 24.914202 45.777913 84.854496 15.845649 59.945414 0 88.215912-7.909514 95.003248z"
+                      fill="#68A5E1">
                 </path>
             </svg>
         </a>
