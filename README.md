@@ -1,3 +1,5 @@
+### 网站密码:`ikun`
+
 # myBlog
 
 It's My blog git repository
@@ -17,10 +19,10 @@ Includes the following technologies
 ### Back end
 - [ ] nodeJs
 - [ ] java
-    - [ ] java
+  - [ ] java
 - [ ] python
-    - [ ] python
-    - [ ] Django
+  - [ ] python
+  - [ ] Django
 
 ### linux
 - [ ] linux
