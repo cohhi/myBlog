@@ -10,9 +10,9 @@ body{
 
 }
 /*顶部区域*/
-#top{
+#top {
     width: 100%;
-    height: 8vh;
+    height: auto;
     opacity: 0.45;
     background-color: #505BC5;
     display: flex;
@@ -20,36 +20,51 @@ body{
     align-items: center;
     justify-content: space-around;
 }
-#top div{
+
+#top div {
     width: 8vh;
     height: auto;
 }
-#time{
 
+#top {
 
 }
-#head{
+
+#time {
+
+}
+
+#body > #top > #steam-404Speak {
+    width: 20vh;
+}
+
+#head {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
-#steam-404Say{
+
+#steam-404Say {
     width: 50vh;
     display: inline-block;
 }
-#label{
+
+#label {
     display: inline-block;
     width: 40vh;
 }
-#label img{
+
+#label img {
     width: 5vh;
     height: 5vh;
 }
-#looklook{
+
+#looklook {
     display: inline-block;
 }
-#software{
+
+#software {
     margin-top: 10vh;
     margin-bottom: 10vh;
     display: flex;
