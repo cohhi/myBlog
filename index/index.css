@@ -50,6 +50,16 @@ body{
     display: inline-block;
 }
 
+#development {
+    display: inline-block;
+    width: 40vh;
+}
+
+#development img {
+    width: 5vh;
+    height: 5vh;
+}
+
 #label {
     display: inline-block;
     width: 40vh;
