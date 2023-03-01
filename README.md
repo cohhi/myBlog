@@ -1,5 +1,5 @@
 ### 网站密码:`ikun`
-
+### website password is ``ikun``
 # myBlog
 
 It's My blog git repository
