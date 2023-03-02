@@ -1,0 +1,80 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsp内嵌java代码</title>
+    <link rel="stylesheet" href="../../../prism/production/prism.css">
+    <script src="../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#format">语法格式</a>
+    <a href="#demo">案例</a>
+    <a href="#method">随便写一个方法并调用</a>
+</div>
+<div id="content">
+    <div id="format">
+        <p>语法格式</p>
+        <h3>在jsp中java代码是有个<% %>包裹</h3>
+    </div>
+    <div id="demo">
+        <p>小案例</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>在此处插入标题</title>
+<!-- author:steam-404 -->
+</head>
+<body>
+<% out.println("鸡你太美"); %>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="method">
+        <p>方法</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>在此处插入标题</title>
+<!-- author:steam-404 -->
+</head>
+<body>
+<!-- 定义方法 -->
+<%!
+String ikun(){
+	return "哎呦,你干嘛";
+}
+%>
+
+<!-- 调用方法 -->
+<%out.print(ikun()); %>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
