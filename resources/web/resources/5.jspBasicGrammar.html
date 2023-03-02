@@ -1,0 +1,166 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsp基本语法</title>
+    <link rel="stylesheet" href="../../../prism/production/prism.css">
+    <script src="../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#steam-404Speak">前言</a>
+    <a href="#format">格式</a>
+    <a id="#jspCode">几个小案例</a>
+</div>
+<div id="content">
+    <div id="steam-404Speak">
+        <h3>学习jsp前需要掌握html和java基础</h3>
+        <h3>什么，你不会!!!</h3>
+        <img src="5.jspBasicGrammar/bigDog.jpg" alt="">
+    </div>
+    <div id="format">
+        <h3>jsp中嵌入java代码主要有两种格式</h3>
+        <h3><%! %></h3>
+        <h3><% %></h3>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="markup">
+                //jsp的声明
+<%!
+	String ikun(){
+		return "哎呦,你干嘛";
+	}
+%>
+
+//jsp的表达式调用
+<%=ikun() %>
+                </script>
+            </code>
+        </pre>
+        <h3><%! %>jsp的声明声明</h3>
+        <h3><%%></h3>
+    </div>
+    <div id="jspCode">
+        <p>小案例</p>
+        <p>随便写一个方法</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+//author:steam-404
+</head>
+<body>
+<%!
+	String ikun(){
+		return "哎呦,你干嘛";
+	}
+%>
+
+<%=ikun() %>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>数值相加</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+//author:steam-404
+</head>
+<body>
+	<%
+        int a=10;
+        int b=20;
+        out.print(a+b);
+	%>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>打印数组</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+</head>
+<body>
+<%
+	int[] array={1,2,3,4,5,6,7,8,9,10};
+%>
+<br>
+<%
+	for(int i:array){
+
+
+%>
+<%=i %>
+<%
+	}
+%>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>数组(换行打印)</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+//author:steam-404
+</head>
+<body>
+for循环
+<%
+	int[] array={1,2,3,4,5,6,7,8,9,10};
+%>
+<br>
+这是数组
+<%
+	for(int i:array){
+		out.print(i+" ");
+%>
+<br>
+<%
+	}
+%>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
