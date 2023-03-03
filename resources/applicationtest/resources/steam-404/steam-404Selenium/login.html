@@ -1,0 +1,72 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../default.css">
+    <script src="../../../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="../../../../../prism/production/prism.css">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        height: 10vh;
+    }
+
+    button {
+        text-align: center;
+        background: deepskyblue;
+        width: 100%;
+        height: 10vh;
+    }
+</style>
+<body>
+<div id="head">
+</div>
+<div id="content">
+    <p>控制台查看账户和密码</p>
+    <label for="">
+        <input id="userName" type="text" placeholder="账户"> <br>
+    </label>
+    <label for="">
+        <input id="userPassword" type="text" placeholder="密码"> <br>
+    </label>
+    <button id="login">登录</button>
+    <script>
+        console.log("账户:admin")
+        console.log("密码:ikun")
+        let userName = document.getElementById("userName")
+        let userPassword = document.getElementById("userPassword")
+        userNameValue = userName.value
+        userPasswordValue = userPassword.value
+        let login = document.getElementById("login")
+        login.onclick = function () {
+            console.log(userPassword)
+            if (userNameValue === "admin") {
+                if (userPasswordValue === "ikun") {
+                    alert("登录成功")
+                } else {
+                    alert("密码错误")
+                }
+            } else {
+                alert("账号不存在")
+            }
+        }
+    </script>
+</div>
+<div id="end">
+</div>
+</body>
+</html>

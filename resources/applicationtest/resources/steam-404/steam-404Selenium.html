@@ -12,7 +12,31 @@
 <div id="head">
 </div>
 <div id="content">
+    <div id="contentId">id</div>
+    <div name="contentName">name</div>
+    <div class="contentClass">class</div>
+    <div>
+        <button>tag(button)</button>
+    </div>
 </div>
+<script>
+    let contentId = document.getElementById("contentId")
+    let contentName = document.getElementsByName("contentName")
+    let contentClass = document.getElementsByClassName("contentClass")
+    let tagButton = document.getElementsByTagName("button")
+    contentId.onclick = function () {
+        console.log("触发contendId单击事件")
+    }
+    contentName[0].onclick = function () {
+        console.log("触发contentName单击事件")
+    }
+    contentClass[0].onclick = function () {
+        console.log("触发contentClass单机事件")
+    }
+    tagButton[0].onclick = function () {
+        console.log("触发tag(button)单击事件")
+    }
+</script>
 <div id="end">
 </div>
 </body>
