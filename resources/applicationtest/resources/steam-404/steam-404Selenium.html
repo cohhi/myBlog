@@ -8,6 +8,11 @@
     <script src="../../../../prism/production/prism.js"></script>
     <link rel="stylesheet" href="../default.css">
 </head>
+<style>
+    div {
+        margin: 5vh;
+    }
+</style>
 <body>
 <div id="head">
 </div>
@@ -23,6 +28,15 @@
     </div>
     <div id="dbclick" ondblclick="dbclick()">dbclick</div>
     <div id="rightClick">鼠标左击/右击/点击滚轮事件</div>
+    <div>
+        <input id="contentInput" type="text" placeholder="模拟输入">
+    </div>
+    <div>
+        <h3 id="contentText">鸡你太美</h3>
+    </div>
+    <div>
+        <input id="contentTest" type="text" placeholder="测试" name="contentTest">
+    </div>
 </div>
 <script>
     let contentId = document.getElementById("contentId")
@@ -51,7 +65,7 @@
     }
     document.getElementById("rightClick").onmousedown = function (e) {
         if (e.button === 0) {
-            console.log("单机鼠标左键")
+            console.log("单击鼠标左键")
         }
         if (e.button === 1) {
             console.log("点击滚轮事件")
