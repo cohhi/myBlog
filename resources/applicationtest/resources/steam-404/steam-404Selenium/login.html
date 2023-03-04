@@ -45,8 +45,10 @@
     </label>
     <button id="login">登录</button>
     <script>
-        console.log("账户:admin")
-        console.log("密码:ikun")
+        user = "admin"
+        password = "ikun"
+        console.log("账户:" + user)
+        console.log("密码:" + password)
         let userName = document.getElementById("userName")
         let userPassword = document.getElementById("userPassword")
         userNameValue = userName.value
@@ -54,8 +56,8 @@
         let login = document.getElementById("login")
         login.onclick = function () {
             console.log(userPassword)
-            if (userNameValue == "admin") {
-                if (userPasswordValue == "ikun") {
+            if (userNameValue === user) {
+                if (userPasswordValue === password) {
                     alert("登录成功")
                 } else {
                     alert("密码错误")
