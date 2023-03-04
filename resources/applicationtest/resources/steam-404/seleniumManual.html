@@ -1,0 +1,70 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selenium手册</title>
+    <link rel="stylesheet" href="../../../../prism/production/prism.css">
+    <script src="../../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#positioning">元素定位</a>
+    <a href="#operation">元素操作</a>
+    <a href="#alert">弹窗操作</a>
+</div>
+<div id="content">
+    <div id="positioning">
+        <p>元素定位</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+find_element_by_id			#id定位
+find_element_by_name		#name定位
+find_element_by_class_name	#class定位
+find_element_by_tag_name	#标签定位
+find_element_by_link_text   #根据内容定位
+find_element_by_xpath('/')  #绝对路径   写上完整路径
+find_element_by_xpath('//') #相对路径  从任意位置查找
+find_element_by_css_selector('标签[type="类型"]')  #css选择器
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="operation">
+        <p>元素操作</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+click  			#点击
+send_keys()  	#模拟键盘输入
+clear()  		#将元素清空
+size()   		#获取元素大小
+text()     		#获取文本信息
+get_attribute() #元素某个属性的值
+is_enabled()    #元素是否可用
+is_displayed()  #是否可见
+is_selencted()  #选定状态
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="alert">
+        <p>弹窗操作</p>
+        <pre>
+            <code class="language-python">
+            <script type="text/plain" class="language-markup">
+switch_to_alert()	#获取弹窗对象
+text	   			#获取弹窗标题
+accept				#点击确认
+dismiss				#点击取消
+            </script>
+        </code>
+        </pre>
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
