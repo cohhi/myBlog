@@ -140,7 +140,7 @@ body{
 
 }
 #endSvg{
-
+    text-align: center;
 }
 #copyright{
     float: end;
