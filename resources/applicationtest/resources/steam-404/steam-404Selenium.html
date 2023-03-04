@@ -44,7 +44,10 @@
         <button>鸡你太美</button>
     </div>
     <div>
-
+        <button id="contendAlert">弹窗</button>
+    </div>
+    <div>
+        <button id="contendAlertMessage">输入框弹窗</button>
     </div>
 </div>
 <script>
@@ -52,6 +55,8 @@
     let contentName = document.getElementsByName("contentName")
     let contentClass = document.getElementsByClassName("contentClass")
     let tagButton = document.getElementsByTagName("button")
+    let contentAlert = document.getElementById("contendAlert")
+    let contendAlertMessage = document.getElementById("contendAlertMessage")
     contentId.onclick = function () {
         console.log("触发contendId单击事件")
     }
@@ -63,6 +68,13 @@
     }
     tagButton[0].onclick = function () {
         console.log("触发tag(button)单击事件")
+    }
+    contentAlert.onclick = function () {
+        alert("我是一个弹窗")
+    }
+    contendAlertMessage.onclick = function () {
+        let userInput = prompt("请输入参数")
+        console.log("输入了:" + userInput)
     }
     dbclick = function () {
         console.log("鼠标双击事件")
