@@ -18,6 +18,11 @@
     <div>
         <button>tag(button)</button>
     </div>
+    <div>
+        <a href="steam-404Selenium/login.html">登录</a>
+    </div>
+    <div id="dbclick" ondblclick="dbclick()">dbclick</div>
+    <div id="rightClick">鼠标右击</div>
 </div>
 <script>
     let contentId = document.getElementById("contentId")
@@ -35,6 +40,25 @@
     }
     tagButton[0].onclick = function () {
         console.log("触发tag(button)单击事件")
+    }
+    dbclick = function () {
+        console.log("鼠标双击事件")
+    }
+    window.onload = function () {
+        document.oncontextmenu = function (e) {
+            e.preventDefault();
+        }
+    }
+    document.getElementById("rightClick").onmousedown = function (e) {
+        if (e.button === 0) {
+            console.log("单机鼠标左键")
+        }
+        if (e.button === 1) {
+            console.log("点击滚轮事件")
+        }
+        if (e.button === 2) {
+            console.log("单击鼠标右键")
+        }
     }
 </script>
 <div id="end">
