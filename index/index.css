@@ -34,8 +34,8 @@ body{
 
 }
 
-#body > #top > #steam-404Speak {
-    width: 20vh;
+#body > #top > div {
+    width: auto;
 }
 
 #head {
