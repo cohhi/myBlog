@@ -10,11 +10,44 @@
 </head>
 <body>
 <div id="head">
+    <a href="#api">基础API</a>
     <a href="#positioning">元素定位</a>
     <a href="#operation">元素操作</a>
     <a href="#alert">弹窗操作</a>
+    <a href="">滚动条</a>
+    <a href="">鼠标/键盘操作</a>
 </div>
 <div id="content">
+    <div id="api">
+        <p>基础API</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+webdriver.xxx()                 #驱动xxx浏览器
+
+maximize_windows()              #最大化浏览器窗口
+get_window_size()               #获取浏览器窗口大小
+set_window_size()               #设置浏览器窗口大小
+get_window_position()           #获取当前窗口的x,y位置
+set_window_position()           #设置当前窗口的x,y位置
+
+get()                           #请求url对应的响应
+refresh()                       #刷新页面
+forward()                       #前进一个页面
+back()                          #后退一个页面
+
+close()                         #关闭当前标签
+quit()                          #关闭所有标签
+
+current_url()                   #返回当前url
+title                           #网页标题
+get_screenshot_as_png()         #截屏
+get_screenshot_as_file(file)    #保存文件
+page_source                     #保存源码
+                </script>
+            </code>
+        </pre>
+    </div>
     <div id="positioning">
         <p>元素定位</p>
         <pre>
