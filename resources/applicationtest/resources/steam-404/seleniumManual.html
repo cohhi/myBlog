@@ -42,8 +42,7 @@ quit()                          #关闭所有标签
 
 current_url()                   #返回当前url
 title                           #网页标题
-get_screenshot_as_png()         #截屏
-get_screenshot_as_file(file)    #保存文件
+get_screenshot_as_file()        #截屏
 page_source                     #保存源码
                 </script>
             </code>
@@ -54,14 +53,32 @@ page_source                     #保存源码
         <pre>
             <code class="language-python">
                 <script type="text/plain" class="language-markup">
-find_element_by_id			#id定位
-find_element_by_name		#name定位
-find_element_by_class_name	#class定位
-find_element_by_tag_name	#标签定位
-find_element_by_link_text   #根据内容定位
-find_element_by_xpath('/')  #绝对路径   写上完整路径
-find_element_by_xpath('//') #相对路径  从任意位置查找
+find_element_by_id()			#id定位
+find_element_by_name()	    	#name定位
+find_element_by_class_name()	#class定位
+find_element_by_tag_name()  	#标签定位
+find_element_by_link_text()     #根据内容定位
+find_element_by_xpath('/')      #绝对路径   写上完整路径
+find_element_by_xpath('//')     #相对路径  从任意位置查找
 find_element_by_css_selector('标签[type="类型"]')  #css选择器
+
+
+# id选择器
+find_element(by=By.ID, value="id")
+# name选择器
+find_element(by=By.NAME, value="name")
+# class选择器
+find_element(by=By.CLASS_NAME, value="class")
+# 标签选择器
+find_element(by=By.TAG_NAME, value="标签")
+# link选择器
+find_element(by=By.LINK_TEXT, value="根据内容定位")
+# 绝对定位选择器
+find_element(by=By.XPATH, value="/")
+# 相对定位选择器
+find_element(by=By.LINK_TEXT, value="//")
+# css选择器
+find_element(by=By.CSS_SELECTOR, value="css")
                 </script>
             </code>
         </pre>
@@ -103,7 +120,11 @@ dismiss				#点击取消
         <pre>
             <code class="language-python">
                 <script type="text/plain" class="language-markup">
+#selenium无法直接操作滚动条,但可以通过执行js代码操作滚动
+#window.scrollTo(100,300) 向右滚动100,向下滚动300
 
+code="window.scrollTo(100,300)"    #JavaScript代码
+execute_script(code)               #执行js代码
                 </script>
             </code>
         </pre>
@@ -113,7 +134,46 @@ dismiss				#点击取消
         <pre>
             <code class="language-python">
                 <script type="text/plain" class="language-markup">
+#使用实例
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+driver.get("http://411.free.svipss.top/blog/resources/applicationtest/resources/steam-404/steam-404Selenium.html")
+# 创建鼠标操作对象
+chains = ActionChains(driver)
+# 选取元素
+dbclick = driver.find_element(by=By.ID, value="dbclick")
+# 单击鼠标左键
+chains.click(dbclick).perform()
+                </script>
+            </code>
+        </pre>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+#鼠标操作
 
+click()                                 #单击鼠标左键
+click_and_hold()                        #按住鼠标左键
+context_click()                         #点击鼠标右键
+double_click()                          #双击鼠标左键
+drag_and_drop(a,b)                      #拖拽到某个元素然后松开
+drag_and_drop_by_offset(source, x, y)   #拖拽到某个坐标然后松开
+move_by_offset(x, y)                    #鼠标从当前位置移动到某个坐标
+move_to_element(to_element)             #鼠标移动到某个元素，悬浮
+move_to_element_with_offset(to_element, x, y)   #移动到距某个元素（左上角坐标）多少距离的位置
+perform()                               #执行链中的所有动作
+
+#键盘操作
+key_down(value, element=None)           #按下按键
+key_up(value, element=None)             #松开按键
+send_keys
+
+
+release(on_element=None)                #在某个元素位置松开鼠标左键
+send_keys(*keys_to_send)                #发送某个键到当前焦点的元素
+send_keys_to_element(element, *keys_to_send)    #发送某个键到指定元素
                 </script>
             </code>
         </pre>
