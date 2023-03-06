@@ -19,6 +19,7 @@ body {
     font-family: "Arial Black", serif;
     display: block;
     color: coral;
+    padding: 1vh;
 }
 
 #head a:hover {

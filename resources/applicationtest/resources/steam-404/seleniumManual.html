@@ -14,8 +14,9 @@
     <a href="#positioning">元素定位</a>
     <a href="#operation">元素操作</a>
     <a href="#alert">弹窗操作</a>
-    <a href="">滚动条</a>
-    <a href="">鼠标/键盘操作</a>
+    <a href="#ScrollBar">滚动条</a>
+    <a href="#mouseKeyboard">鼠标/键盘操作</a>
+    <a href="#picture">图片操作</a>
 </div>
 <div id="content">
     <div id="api">
@@ -90,10 +91,46 @@ is_selencted()  #选定状态
             <script type="text/plain" class="language-markup">
 switch_to_alert()	#获取弹窗对象
 text	   			#获取弹窗标题
+send_keys           #向输入框写入内容
 accept				#点击确认
 dismiss				#点击取消
             </script>
         </code>
+        </pre>
+    </div>
+    <div id="ScrollBar">
+        <p>滚动条</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="mouseKeyboard">
+        <p>鼠标/键盘操作</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="picture">
+        <p>图片操作</p>
+        <h3>截图方法中不允许存在以下符号</h3>
+        <h3>/ : * ? # ” < > | </h3>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+driver.save_screenshot("xxx.png")                # 必须是.png图片
+driver.get_screenshot_as_file( "/xxx.png")       #必须带路径 绝对/相对
+driver.get_screenshot_as_png()                   # 返回二进制数据
+driver.get_screenshot_as_base64()                # 返回base64加密后的数据
+                </script>
+            </code>
         </pre>
     </div>
 </div>
