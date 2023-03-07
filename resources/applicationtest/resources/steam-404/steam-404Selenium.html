@@ -52,7 +52,10 @@
     <div>
         <p>这是一张演示图片</p>
         <h3>ikun.png</h3>
-        <img src="material/ikun.png" alt="ikun.png">
+        <a href="material/ikun.png" download="鸡你太美.png">
+            <img id="ikunPicture" src="material/ikun.png" alt="ikun.png">
+            <!--        小黑子,有没有素质,食不食油饼-->
+        </a>
     </div>
 </div>
 <script>
@@ -62,6 +65,7 @@
     let tagButton = document.getElementsByTagName("button")
     let contentAlert = document.getElementById("contendAlert")
     let contendAlertMessage = document.getElementById("contendAlertMessage")
+    let ikun = document.getElementById("ikunPicture")
     contentId.onclick = function () {
         console.log("触发contendId单击事件")
     }
@@ -99,6 +103,9 @@
         if (e.button === 2) {
             console.log("单击鼠标右键")
         }
+    }
+    ikun.onclick = function () {
+        console.log("触发下载事件")
     }
 </script>
 <div id="end">
