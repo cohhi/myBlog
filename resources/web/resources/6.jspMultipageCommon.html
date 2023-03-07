@@ -1,0 +1,118 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsp多页面公用</title>
+    <link rel="stylesheet" href="../../../prism/production/prism.css">
+    <script src="../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#tomcatDirectory">tomcat目录</a>
+    <a href="#Principles">jsp原理</a>
+    <a href="#MultiPageSharing">jsp多页面共用</a>
+</div>
+<div id="content">
+    <div id="tomcatDirectory">
+        <p>tomcat目录</p>
+        <table>
+            <tr>
+                <td>bin</td>
+                <td>存放tomcat命令</td>
+            </tr>
+            <tr>
+                <td>conf</td>
+                <td>配置文件</td>
+            </tr>
+            <tr>
+                <td>lib</td>
+                <td>存放需要加载的jar包</td>
+            </tr>
+            <tr>
+                <td>logs</td>
+                <td>日志文件</td>
+            </tr>
+            <tr>
+                <td>temp</td>
+                <td>临时文件</td>
+            </tr>
+            <tr>
+                <td>webapps</td>
+                <td>存放应用程序</td>
+            </tr>
+            <tr>
+                <td>work</td>
+                <td>存放运行时编译后的文件</td>
+            </tr>
+        </table>
+    </div>
+    <div id="Principles">
+        <p>jsp原理</p>
+        <h3>JSP文件第一次被请求时，JSP引擎把该JSP文件转换成为一个Servlet</h3>
+        <h3>将.jsp转换为java文件</h3>
+        <h3>将转换后的java文件编译为.class文件,并由Java的JVM虚拟机解释执行</h3>
+    </div>
+    <div id="MultiPageSharing">
+        <p>多页面共用(在主页面调用其他页面的变量)</p>
+        <h3>通过指令导包实现</h3>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<%@ include file="xxx.jsp" %>
+//导入xxx包
+                </script>
+            </code>
+        </pre>
+        <p>创建one.jsp</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ include file="two.jsp"  %>
+<!-- 导入two.jsp -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>one</title>
+</head>
+<body>
+
+<%=out.println(ikun)%>
+<!-- 打印two.jsp中的ikun变量 -->
+
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>创建two.jsp</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>two</title>
+</head>
+<body>
+
+<%! String ikun="鸡你太美"; %>
+<!-- 声明ikun变量 -->
+
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
