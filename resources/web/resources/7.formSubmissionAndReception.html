@@ -1,0 +1,150 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsp表单的提交与接收</title>
+    <link rel="stylesheet" href="../../../prism/production/prism.css">
+    <script src="../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#PageNesting">多页面嵌套</a>
+    <a href="#submit">表单提交</a>
+    <a href="#receive">表单接收</a>
+</div>
+<div id="content">
+    <div id="PageNesting">
+        <p>主页面(index.jsp)</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-malup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+</head>
+<body>
+<!-- 嵌套list.jsp -->
+<%@include file="list.jsp" %>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>被嵌套的页面(list.jsp)</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+</head>
+<body>
+<h3>嵌套内容</h3>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="submit">
+        <p>表单提交</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-malup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+</head>
+<body>
+<p>用户注册</p>
+//method提交方式    action提交地址
+<form method="get" action="message.jsp">
+用户名:  <input type="text" name="userName"> <br>
+密码:    <input type="password" name="password"> <br>
+性别:    <input type="radio" name="sex" value="男">男
+		 <input type="radio" name="sex" value="女">女
+		 <br>
+邮箱:	 <input type="email" name="email"> <br>
+开发语言
+<input type="radio" name="java" value="java">java
+<input type="radio" name="c" value="c">c
+<input type="radio" name="python" value="python">python
+<br>
+<input type="submit" value="注册">
+<input type="reset" value="重置">
+</form>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="receive">
+        <p>表单接收</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-malup">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+</head>
+<body>
+<%
+request.setCharacterEncoding("utf-8");
+//设置编码格式
+
+
+//接收传来的表单信息
+String name=request.getParameter("userName");
+String password=request.getParameter("password");
+String sex=request.getParameter("sex");
+String email=request.getParameter("email");
+String java=request.getParameter("java");
+String c=request.getParameter("c");
+String python=request.getParameter("python");
+
+//打印表单内容
+out.println("用户名:"+name);
+out.println("密码:"+password);
+out.println("性别:"+sex);
+out.println("邮箱:"+email);
+out.println("开发语言:");
+//判断是否为空
+if(java != null){
+	out.println("java");
+}if(c != null){
+	out.println("c");
+}
+if(python != null){
+	out.println("python");
+}
+%>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
