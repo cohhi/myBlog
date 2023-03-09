@@ -1,0 +1,227 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象request</title>
+    <link rel="stylesheet" href="../../../prism/production/prism.css">
+    <script src="../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#requestAPI">request</a>
+    <a href="#apiDemo">api演示</a>
+    <a href="#sum">算术题</a>
+</div>
+<div id="content">
+    <div id="requestAPI">
+        <p>request API</p>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+getContentType()            //当前请求的MIME类型
+getContentLength()          //请求体的长度
+getCharacterEncoding()      //当前请求的字符编码方式
+getRemoteAddr()             //客户端的IP地址
+getRemoteHost()             //客户端的完整主机名
+getRemotePort()             //客户端端口号
+getScheme()                 //当前请求的发送方式
+getServerName()             //服务器的主机名
+getServerPort()             //服务器端口号
+getRequestURI()             //当前request所请求的URI
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="apiDemo">
+        <p>request演示 01.jsp</p>
+        <div id="1jsp">
+            <pre>
+                <code class="language-java">
+                    <script type="text/plain" class="language-markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here </title>
+</head>
+<body>
+	<form method="post" action="02.jsp">
+	<input name="username" type="text" id="username"></input>
+	<br></br>
+	<input type="submit" name="Submit" value="提交"></input>
+	</form>
+</body>
+</html>
+                    </script>
+                </code>
+            </pre>
+        </div>
+        <div id="2jsp">
+            <p>02.jsp</p>
+            <pre>
+                <code class="language-java">
+                    <script type="text/plain" class="language-markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+当前请求的MIME类型：<%= request.getContentType() %><br/>
+请求体的长度：<%= request.getContentLength() %><br/>
+当前请求的字符编码方式:<%= request.getCharacterEncoding() %><br/>
+客户端的IP地址:<%= request.getRemoteAddr() %><br/>
+客户端的完整主机名:<%= request.getRemoteHost() %><br/>
+客户端端口号:<%= request.getRemotePort() %><br/>
+当前请求的发送方式:<%= request.getScheme() %><br/>
+服务器的主机名:<%= request.getServerName() %><br/>
+服务器端口号:<%= request.getServerPort() %><br/>
+当前request所请求的URI<%= request.getRequestURI() %><br/>
+</body>
+</html>
+                    </script>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div id="sum">
+        <p>算术题</p>
+        <h3>index.jsp</h3>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.util.Random"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	Random rand=new Random();
+	int a=rand.nextInt(100);
+	int b=rand.nextInt(100);
+	int operator=rand.nextInt(4);
+	int answer=0;
+	out.print(a);
+	switch(operator){
+	case 0:
+		out.print("+");
+		answer=a+b;
+		break;
+	case 1:
+		out.print("-");
+		answer=a-b;
+		break;
+	case 2:
+		out.print("*");
+		answer=a*b;
+		break;
+	case 3:
+		answer=a/b;
+		out.print("/");
+
+	}
+	out.print(b);
+	out.print("=");
+	%>
+	<form action="message.jsp" method="get">
+	<input type="hidden" name="answer" value="<%=answer%>"></input>
+	<input type="text" name="userAnswer"></input><br/>
+	<input type="submit" value="提交"></input>
+	</form>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>处理请求</p>
+        <h3>message.jsp</h3>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	int answer = Integer.parseInt(request.getParameter("answer"));
+	int userAnswer = Integer.parseInt(request.getParameter("userAnswer"));
+	if(answer == userAnswer){
+		response.sendRedirect("ok.jsp");
+
+	}else{
+		response.sendRedirect("no.jsp");
+	}
+	%>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>正确的结果</p>
+        <h3>yes.jsp</h3>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>正确的结果</title>
+</head>
+<body>
+<h1>yes</h1>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+        <p>错误的结果</p>
+        <h3>no.jsp</h3>
+        <pre>
+            <code class="language-java">
+                <script type="text/plain" class="language-markup">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>错误的结果</title>
+</head>
+<body>
+<h1>no</h1>
+</body>
+</html>
+                </script>
+            </code>
+        </pre>
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
