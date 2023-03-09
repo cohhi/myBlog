@@ -45,7 +45,7 @@ head {
 #content a {
     font-weight: bold;
     font-family: "Arial Black", serif;
-    /*display: block;*/
+    display: block;
     color: coral;
     font-size: 5vh;
     text-decoration: coral;
