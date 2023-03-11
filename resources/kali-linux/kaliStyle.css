@@ -4,7 +4,7 @@
 }
 
 html {
-
+    background: #F9F9F9;
 }
 
 head {
@@ -19,6 +19,15 @@ body {
 
 }
 
+#head #kali_kali {
+    width: 100%;
+    padding-bottom: 5vh;
+}
+
+#head #kali_kali img {
+    width: 100%;
+}
+
 #content {
     background: #F9F9F9;
 }
@@ -26,6 +35,89 @@ body {
 #content #kaliDragonIcon {
     width: 20vh;
     height: 20vh;
+}
+
+#content #banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+#content #gotoKali {
+    padding-top: 5vh;
+    padding-bottom: 20vh;
+}
+
+#content #banner #kaliDragonIcon {
+
+}
+
+#content #banner #kaliQuotations {
+
+}
+
+#content #banner #kaliQuotations p {
+    font-size: 10vh;
+    font-family: "华文楷体", serif;
+    background: linear-gradient(to right, blueviolet, salmon);
+    border-radius: 1vh;
+}
+
+#content #banner #kaliQuotations h1 {
+
+}
+
+#content #gotoKali {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #gotoKali button {
+    margin: 3vh;
+    width: 15vh;
+    height: 6vh;
+    border-radius: 1vh;
+}
+
+#content #gotoKali button:hover {
+    transition: 0.5s;
+    width: 15.5vh;
+    height: 6.5vh;
+    border-radius: 1vh;
+}
+
+#content #commonTool {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#content #commonTool div {
+    width: 20vh;
+    height: 20vh;
+    padding: 5vh;
+}
+
+#content #commonTool div img {
+    width: 8vh;
+    height: 8vh;
+    text-align: center;
+}
+
+#content #commonTool div p {
+    text-align: center;
+    font-size: 1.5vh;
+    display: inline-block;
+    width: auto;
+    line-height: 4vh;
+}
+
+#content #commonTool div h1 {
+    font-size: 2vh;
 }
 
 #end {
