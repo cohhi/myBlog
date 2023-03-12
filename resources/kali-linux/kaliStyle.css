@@ -165,3 +165,16 @@ body {
 #end {
 
 }
+
+.getStart {
+    margin: 3vh;
+    width: 15vh;
+    height: 6vh;
+    border-radius: 1vh;
+    border: 0.4vh solid #FDA44C;
+}
+
+.getStart:hover {
+    transition: 1s;
+    background: #FDA44C;
+}
