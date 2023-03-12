@@ -32,6 +32,14 @@ body {
     background: #F9F9F9;
 }
 
+#content #banner {
+    height: 30%;
+}
+
+#content #gotoKali {
+    height: 70%;
+}
+
 #content #kaliDragonIcon {
     width: 20vh;
     height: 20vh;
@@ -74,18 +82,52 @@ body {
     align-items: center;
 }
 
-#content #gotoKali button {
+#content #gotoKali #kaliWebsite {
     margin: 3vh;
     width: 15vh;
     height: 6vh;
     border-radius: 1vh;
+    border: 0.4vh solid #FDA44C;
 }
 
-#content #gotoKali button:hover {
+#content #gotoKali #kaliWebsite:hover {
     transition: 0.5s;
-    width: 15.5vh;
-    height: 6.5vh;
+    width: 15vh;
+    height: 6vh;
     border-radius: 1vh;
+    background: #FDA44C;
+}
+
+#content #gotoKali #getKali {
+    margin: 3vh;
+    width: 15vh;
+    height: 6vh;
+    border-radius: 1vh;
+    border: 0.4vh solid #FDA44C;
+}
+
+#content #gotoKali #getKali:hover {
+    transition: 0.5s;
+    width: 15vh;
+    height: 6vh;
+    border-radius: 1vh;
+    background: #FDA44C;
+}
+
+#content #gotoKali #kaliDocument {
+    margin: 3vh;
+    width: 15vh;
+    height: 6vh;
+    border-radius: 1vh;
+    border: 0.4vh solid #367BF0;
+}
+
+#content #gotoKali #kaliDocument:hover {
+    transition: 0.5s;
+    width: 15vh;
+    height: 6vh;
+    border-radius: 1vh;
+    background: #367BF0;
 }
 
 #content #commonTool {
