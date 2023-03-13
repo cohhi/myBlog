@@ -1,0 +1,46 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>资产管理系统登录页面</title>
+</head>
+<body>
+<div id="head">
+    <!--    用户名:sysadmin-->
+    <!--    密码:SysAdmin123-->
+</div>
+<div id="content">
+    <form action="" method="get" style="text-align: center">
+        <label for="">
+            <input style="width: 40vh;height: 10vh" id="useName" name="userName" type="text" placeholder="用户名">
+        </label>
+        <br>
+        <label for="">
+            <input style="width: 40vh;height: 10vh" name="userPassword" type="password" placeholder="密码">
+        </label>
+    </form>
+    <div style="text-align: center">
+        <button id="login" style="width: 20vh;height: 10vh">登录</button>
+    </div>
+    <script>
+        let check = document.getElementById("login");
+        check.onclick = function () {
+            let user = document.getElementsByName("userName")
+            let userPassword = document.getElementsByName("userPassword");
+            console.log("用户点击登录")
+            console.log("用户:" + user[0].value)
+            console.log("密码" + userPassword[0].value)
+            if (user[0].value === "sysadmin" && userPassword[0].value === "SysAdmin123") {
+                alert("登录成功,点击确定跳转至资产管理系统")
+                window.location.href = "index.html"
+            } else {
+                console.log("用户名或密码错误")
+            }
+        }
+    </script>
+</div>
+<div id="end">
+</div>
+</body>
+</html>

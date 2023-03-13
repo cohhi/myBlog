@@ -1,0 +1,25 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+</head>
+<body>
+<div id="head">
+</div>
+<div id="content">
+    <h4>手机号:</h4><input id="userNumber" name="userNumber" type="text">
+    <button id="save">保存</button>
+    <script>
+        let saveNumber = document.getElementById("save")
+        saveNumber.onclick = function () {
+            let phoneNumber = document.getElementsByName("userNumber")
+            alert("手机号:" + phoneNumber[0].value + "\n" + "保存成功")
+        }
+    </script>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
