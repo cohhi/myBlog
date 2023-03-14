@@ -17,6 +17,8 @@
     <a href="#ScrollBar">滚动条</a>
     <a href="#mouseKeyboard">鼠标/键盘操作</a>
     <a href="#picture">图片操作</a>
+    <a href="#iframe">iframe</a>
+    <a href="#selector">下拉框</a>
 </div>
 <div id="content">
     <div id="api">
@@ -189,6 +191,51 @@ driver.save_screenshot("xxx.png")                # 必须是.png图片
 driver.get_screenshot_as_file( "/xxx.png")       #必须带路径 绝对/相对
 driver.get_screenshot_as_png()                   # 返回二进制数据
 driver.get_screenshot_as_base64()                # 返回base64加密后的数据
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="iframe">
+        <p>重定向</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-python">
+switch_to.frame("id/name")      #id或name定位
+
+switch_to.frame(1)              #下标方式切换
+
+iframe = driver.find_element_by_tag_name("iframe")
+driver.switch_to.frame(iframe)  #标签方式定位
+
+iframe=driver.find_element_by_xpath("xpath")
+driver.switch_to.frame(iframe)  #xpath方式定位
+
+switch_to.default_content()     #切换回主页面
+
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="selector">
+        <p>下拉框处理</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+# 使用前需要引入
+from selenium.webdriver.support.select import Select
+
+
+# 包装select元素
+selectMessage=Select(select元素)
+
+# 索引选择器
+selectMessage.select_by_index(1)
+
+# value值选择器
+selectMessage.select_by_value("optionC")
+
+# 内容选择器
+selectMessage.select_by_visible_text("C")
                 </script>
             </code>
         </pre>
