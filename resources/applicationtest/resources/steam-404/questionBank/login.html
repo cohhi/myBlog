@@ -23,6 +23,10 @@
     <div style="text-align: center">
         <button id="login" style="width: 20vh;height: 10vh">登录</button>
     </div>
+    <div>
+        <p>用户名:sysadmin</p>
+        <p>密码:SysAdmin123</p>
+    </div>
     <script>
         let check = document.getElementById("login");
         check.onclick = function () {
@@ -35,6 +39,7 @@
                 alert("登录成功,点击确定跳转至资产管理系统")
                 window.location.href = "index.html"
             } else {
+                alert("用户名或密码错误")
                 console.log("用户名或密码错误")
             }
         }
