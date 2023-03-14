@@ -72,6 +72,13 @@
         <p>上传文件</p>
         <input type="file" id="inputFile">
     </div>
+    <div id="ikunText">
+        <p class="ikunP" id="ikun1">ikun1</p>
+        <p class="ikunP" id="ikun2">ikun2</p>
+        <p class="ikunP" id="ikun3">ikun3</p>
+        <p class="ikunP" id="ikun4">ikun4</p>
+        <p class="ikunP" id="ikun5">ikun5</p>
+    </div>
 </div>
 <script>
     let contentId = document.getElementById("contentId")
@@ -121,6 +128,26 @@
     }
     ikun.onclick = function () {
         console.log("触发下载事件")
+    }
+    let ikun1 = document.getElementById("ikun1")
+    let ikun2 = document.getElementById("ikun2")
+    let ikun3 = document.getElementById("ikun3")
+    let ikun4 = document.getElementById("ikun4")
+    let ikun5 = document.getElementById("ikun5")
+    ikun1.onclick = function () {
+        console.log("ikun1")
+    }
+    ikun2.onclick = function () {
+        console.log("ikun2")
+    }
+    ikun3.onclick = function () {
+        console.log("ikun3")
+    }
+    ikun4.onclick = function () {
+        console.log("ikun4")
+    }
+    ikun5.onclick = function () {
+        console.log("ikun5")
     }
 </script>
 <div id="end">
