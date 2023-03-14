@@ -19,6 +19,7 @@
     <a href="#picture">图片操作</a>
     <a href="#iframe">iframe</a>
     <a href="#selector">下拉框</a>
+    <a href="#uploadFile">文件上传</a>
 </div>
 <div id="content">
     <div id="api">
@@ -236,6 +237,18 @@ selectMessage.select_by_value("optionC")
 
 # 内容选择器
 selectMessage.select_by_visible_text("C")
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="uploadFile">
+        <p>文件上传(通过send_keys)</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-python">
+path="文件路径"
+uploadFile=driver.find_element("找元素")
+uploadFile.send_keys(path)
                 </script>
             </code>
         </pre>
