@@ -10,20 +10,46 @@
 </head>
 <body>
 <div id="head">
-    <a href="#"></a>
+    <a href="#ddtAPI">ddt</a>
+    <a href="#csv">读取csv格式文件</a>
 </div>
 <div id="content">
-    <h3>ddt需要配合unittest</h3>
-    <pre>
-        <code class="language-python">
-            <script type="text/plain" class="language-markup">
+    <div id="ddtAPI">
+        <h3>ddt需要配合unittest</h3>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
 @ddt        #引入ddt模块
 @data       #导入数据
 @unpack     #拆分数据
 @file_data  #导入外部数据
-            </script>
-        </code>
-    </pre>
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="csv">
+        <p>通过导入csv模块</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+import csv
+# 导入模块
+
+file=open("文件.csv",encoding="UTF_8")
+fIleMessage=csv.reader(file)
+# 读取csv文件
+
+print(file.read)
+# 读取所有文件信息
+
+print(next(file))
+# 读取文件第一行信息
+print(next(file))
+# 读取文件第二行信息,依次类推
+                </script>
+            </code>
+        </pre>
+    </div>
 </div>
 <div id="end">
 </div>
