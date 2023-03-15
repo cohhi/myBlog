@@ -20,6 +20,7 @@
     <a href="#iframe">iframe</a>
     <a href="#selector">下拉框</a>
     <a href="#uploadFile">文件上传</a>
+    <a href="#windowSwitching">窗口切换</a>
 </div>
 <div id="content">
     <div id="api">
@@ -245,10 +246,24 @@ selectMessage.select_by_visible_text("C")
         <p>文件上传(通过send_keys)</p>
         <pre>
             <code class="language-python">
-                <script type="text/plain" class="language-python">
+                <script type="text/plain" class="language-markup">
 path="文件路径"
 uploadFile=driver.find_element("找元素")
 uploadFile.send_keys(path)
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="windowSwitching">
+        <p>窗口切换</p>
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+all_windows=driver.window_handles
+# 获取当前会话中所有的句柄
+
+driver.switch_to.window(all_windows[0])
+# 将焦点切换到指定窗口
                 </script>
             </code>
         </pre>
