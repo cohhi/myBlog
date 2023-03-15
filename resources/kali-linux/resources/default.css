@@ -12,7 +12,7 @@ head {
 }
 
 body {
-
+    font-family: Cantarell, sans-serif;
 }
 
 #head {
@@ -36,7 +36,7 @@ body {
 iframe {
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     padding: 0;
 }
@@ -50,7 +50,7 @@ iframe {
 
 #element {
     text-align: center;
-    width: 90%;
+    width: 100%;
     height: 100vh;
 }
 
@@ -59,13 +59,31 @@ iframe {
     width: 100%;
 }
 
-a {
-    margin: 3vh;
-}
-
 p {
     padding-top: 5vh;
     padding-bottom: 1vh;
     color: #367BF0;
     font-size: 5vh;
+}
+
+button {
+    border: 1px solid #fea44c;
+    border-radius: 0.3vh;
+    width: 15vh;
+    height: 5vh;
+}
+
+button:hover {
+    background: #fea44c;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+a:hover {
+    transition: 0.3s;
+    color: white;
 }
