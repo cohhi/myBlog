@@ -21,6 +21,7 @@
     <a href="#selector">下拉框</a>
     <a href="#uploadFile">文件上传</a>
     <a href="#windowSwitching">窗口切换</a>
+    <a href="#wait">等待</a>
 </div>
 <div id="content">
     <div id="api">
@@ -264,6 +265,21 @@ all_windows=driver.window_handles
 
 driver.switch_to.window(all_windows[0])
 # 将焦点切换到指定窗口
+                </script>
+            </code>
+        </pre>
+    </div>
+    <div id="wait">
+        <pre>
+            <code class="language-python">
+                <script type="text/plain" class="language-markup">
+# 强制等待
+from time import sleep #导入time中的sleep方法
+sleep(等待时间(秒))
+
+# 隐式等待
+driver.implicitly_wait(等待时间(秒))
+
                 </script>
             </code>
         </pre>
