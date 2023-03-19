@@ -33,17 +33,76 @@ TestFixture (测试夹具)
         <pre>
             <code class="language-python">
                 <script type="text/plain" class="language-markup">
-assertEqual("数据1","数据2")			    # 检查两个值相等
-assertNotEqual("数据1","数据2")			# 检查两个值不相等
+import unittest
 
-assertTrue("表达式")					    # 检查表达式是否为真
-assertFalse("表达式")					# 检查表达式是否为假
+'''
+断言:
+    assertEqual
+    assertNotEqual
 
-assertIn("数据1","数据2")				# 数据2包含数据1
-assertNotIn("数据1","数据2")			    # 数据2不包含数据1
+    assertTrue
+    assertFalse
+
+    assertIs
+    assertIsNot
+
+    assertIsNone
+    assertIsNotNone
+
+    assertIn
+    assertNotIn
+'''
+class Test(unittest.TestCase):
+    def test01(self):
+        self.assertEqual('a', 'a')
+        # 检查两个值相等
+
+    def test02(self):
+        self.assertNotEqual('a', 'b')
+        # 检查两个值不相等
+
+    def test03(self):
+        self.assertTrue(1 + 1 == 2)
+        # 检查表达式成立
+
+    def test04(self):
+        self.assertFalse(1 + 1 == 3)
+        # 检查表达式不成立
+
+    def test05(self):
+        self.assertIs('a', 'a')
+        # is等同于==
+
+    def test06(self):
+        self.assertIsNot('a', 'b')
+        # not等同于！=
+
+    def test07(self):
+        msg = None
+        self.assertIsNone(msg)
+        # 检查传入数据为空
+
+    def test08(self):
+        self.assertIsNotNone("test")
+        # 检查传入数据为不为空
+
+    def test09(self):
+        msg1 = 'a'
+        msg2 = 'abc'
+        self.assertIn(msg1, msg2)
+        # 检查元素是否包含
+
+    def test10(self):
+        msg1 = 'a'
+        msg2 = 'bcd'
+        self.assertNotIn(msg1, msg2)
+        # 检查元素是否不包含
 
 
-assertSequenceEqual("数据","数据")		# 有序列表(列表/字典等)
+if __name__ == '__main__':
+    unittest.main()
+    # 执行测试用例
+
                 </script>
             </code>
         </pre>
