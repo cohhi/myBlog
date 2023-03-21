@@ -28,24 +28,24 @@
         </pre>
     </div>
     <div id="csv">
-        <p>通过导入csv模块</p>
+        <p>通过ddt读取scv格式文件</p>
         <pre>
             <code class="language-python">
                 <script type="text/plain" class="language-markup">
-import csv
-# 导入模块
+import csv  #导入csv
+import unittest     #导入单元测试框架
+from ddt import ddt, data, unpack    #导入ddt
 
-file=open("文件.csv",encoding="UTF_8")
-fIleMessage=csv.reader(file)
-# 读取csv文件
+@ddt
+class TestCsv(unittest.TestCase):
 
-print(file.read)
-# 读取所有文件信息
+    @data(*csv.reader(open('testdata.csv')))
+    @unpack
+    def test_csv(self, value1, value2):
+        print(value1, value2)
 
-print(next(file))
-# 读取文件第一行信息
-print(next(file))
-# 读取文件第二行信息,依次类推
+if __name__ == '__main__':
+    unittest.main()     #执行主方法
                 </script>
             </code>
         </pre>
