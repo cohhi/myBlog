@@ -6,7 +6,7 @@
 body {
     background-image: linear-gradient(45deg, #CD415B, #6E3DEB);
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 /*html*/
@@ -70,7 +70,8 @@ head {
 }
 
 p {
-
+    text-align: center;
+    font-size: 3vh;
 }
 
 h1 {
