@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>githubAPI</title>
+</head>
+<style>
+    * {
+        margin: 0 auto;
+        padding: 0;
+        background-color: #FFFFFF;
+    }
+
+    #body {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
+        height: auto;
+    }
+
+    tr {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    td {
+        width: auto;
+        height: 10vh;
+    }
+
+    tr > p {
+        display: inline-block;
+    }
+    tr>td:first-child{
+        color: #367BF0;
+    }
+</style>
+<body>
+<div id="body">
+    <table>
+        <tr>
+            <td style="color: #6E3DEB">功能</td>
+            <td style="color: #6E3DEB">api地址</td>
+            <td style="color: #6E3DEB">请求方式</td>
+            <td style="color: #6E3DEB">请求参数</td>
+            <td style="color: #6E3DEB">返回参数</td>
+        </tr>
+        <tr>
+            <td>获取用户信息</td>
+            <td>https://api.github.com/users/</td>
+            <td>get</td>
+            <td>用户名</td>
+            <td>对象</td>
+        </tr>
+        <tr>
+            <td>获取用户所有仓库</td>
+            <td>https://api.github.com/users/{用户名}/repos</td>
+            <td>get</td>
+            <td>用户名</td>
+            <td>数组</td>
+        </tr>
+        <tr>
+            <td>获取某个仓库的详细信息</td>
+            <td>https://api.github.com/repos/{用户名}/{仓库名}</td>
+            <td>get</td>
+            <td>path路径： 用户名 和 仓库名</td>
+            <td>返回一个仓库对象</td>
+        </tr>
+        <tr>
+            <td>获取某个仓库里根目录文件或文件夹数组</td>
+            <td>https://api.github.com/repos//{用户名}/{仓库名}/contents</td>
+            <td>get</td>
+            <td>path路径： 用户名 和 仓库名</td>
+            <td>返回一个首层文件或文件夹数组</td>
+        </tr>
+        <tr>
+            <td>获取某个仓库里子目录文件或文件夹数组</td>
+            <td>https://api.github.com/repos//{用户名}/{仓库名}/contents/{文件名或文件夹名}</td>
+            <td>get</td>
+            <td>path路径： 用户名 和 仓库名和文件名或文件夹名</td>
+            <td>返回一个文件数组</td>
+        </tr>
+        <tr>
+            <td>获取某文件的原始内容（Raw）</td>
+            <td>1.
+                通过上面的文件信息中提取download_url这条链接，就能获取它的原始内容了。
+                <br>
+                2.或者直接访问：https://raw.githubusercontent.com/{用户名}/{仓库名}/{分支名}/{文件路径}
+            </td>
+            <td>get</td>
+            <td>path路径： 用户名 和 仓库名和文件l路径</td>
+            <td>返回一个文件内容的字符串</td>
+        </tr>
+        <tr>
+            <td>获取某个用户的跟随者列表</td>
+            <td>https://api.github.com/users/{用户名}/followers</td>
+            <td>get</td>
+            <td>path路径： 用户名</td>
+            <td>返回一个数组</td>
+        </tr>
+        <tr>
+            <td>获取某个用户正在关注谁列表</td>
+            <td>https://api.github.com/users/{用户名}}/following</td>
+            <td>get</td>
+            <td>path路径： 用户名</td>
+            <td>返回一个数组</td>
+        </tr>
+        <tr>
+            <td>获取某个用户加入的组织列表</td>
+            <td>https://api.github.com/users/{用户名}/orgs</td>
+            <td>get</td>
+            <td>path路径： 用户名</td>
+            <td>返回一个数组</td>
+        </tr>
+        <tr>
+            <td>repo中所有的commits列表</td>
+            <td>https://api.github.com/repos/{用户名}/{仓库名}/commits</td>
+            <td>get</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>某一条commit详情</td>
+            <td>https://api.github.com/repos/{用户名}/{仓库名}/commits/{某一条commit的SHA}</td>
+            <td>get</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>issues列表</td>
+            <td>https://api.github.com/repos/{用户名}/{仓库名}/issues</td>
+            <td>get</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>某条issue详情</td>
+            <td>https://api.github.com/repos/{用户名}/{仓库名}/issues/{序号}</td>
+            <td>get</td>
+            <td>issues都是以1,2,3这样的序列排号的</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>某issue中的comments列表</td>
+            <td>https://api.github.com/repos/{用户名}/{仓库名}/issues/{序号}/comments</td>
+            <td>get</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>某comment详情</td>
+            <td>https://api.github.com/repos/{用户名}/{仓库名}/issues/comments/{评论详情的ID}</td>
+            <td>get</td>
+            <td>评论ID是从issues列表中获得的</td>
+            <td>-</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
